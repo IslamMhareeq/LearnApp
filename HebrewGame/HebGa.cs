@@ -1,7 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HebrewGame
@@ -11,14 +15,35 @@ namespace HebrewGame
         public Hebrew()
         {
             InitializeComponent();
+            label_word.RightToLeft = RightToLeft.Yes;
+            textBox1_Guess.RightToLeft = RightToLeft.Yes;
+            label_result.RightToLeft = RightToLeft.Yes;
+            label_score.RightToLeft = RightToLeft.Yes;
             this.StartPosition = FormStartPosition.CenterScreen;
+
         }
-
-        string[] words = new[] { "Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grape", "Honeydew", "Ivy", "Jackfruit" };
-        static int index = 0;
-        static int score = 0;
+        int index = 0;
+        int score = 0;
         Random random = new Random();
+        string[] words = {
+      "שלום", // Shalom - Peace/Hello
+            "תודה", // Toda - Thank you
+            "כן", // Ken - Yes
+            "לא", // Lo - No
+            "בבקשה", // Bevakasha - Please
+            "אהבה", // Ahava - Love
+            "משפחה", // Mishpacha - Family
+            "חבר", // Chaver - Friend (male)
+            "חברה", // Chavera - Friend (female)
+            "בית", // Bayit - House/Home
+            "ספר", // Sefer - Book
+            "ילד", // Yeled - Boy/Child
+            "ילדה", // Yalda - Girl/Child
+            "אוכל", // Ochel - Food
+            "מים" // Mayim - Water
+        };
 
+        /*Random random = new Random();*/
         private void button2_Click(object sender, EventArgs e)
         {
             index = 0;
