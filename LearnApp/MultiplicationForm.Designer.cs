@@ -31,6 +31,7 @@
             this.lblQuestion = new System.Windows.Forms.Label();
             this.txtAnswer = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.trfl = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblQuestion
@@ -62,11 +63,22 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // trfl
+            // 
+            this.trfl.BackColor = System.Drawing.Color.White;
+            this.trfl.Location = new System.Drawing.Point(430, 422);
+            this.trfl.Name = "trfl";
+            this.trfl.Size = new System.Drawing.Size(61, 69);
+            this.trfl.TabIndex = 5;
+            this.trfl.UseVisualStyleBackColor = false;
+            this.trfl.Click += new System.EventHandler(this.trfl_Click);
+            // 
             // MultiplicationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 924);
+            this.Controls.Add(this.trfl);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.lblQuestion);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.TextBox txtAnswer;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button trfl;
     }
 }
