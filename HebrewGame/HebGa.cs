@@ -94,7 +94,7 @@ namespace HebrewGame
                 label_result.BackColor = Color.Red;
             }
             textBox1_Guess.Text = "";
-            label_score.Text = $"{score} / {words.Length}";
+            label_score.Text = $" {words.Length} /{score} ";
 
             if (index == words.Length - 1)
             {
